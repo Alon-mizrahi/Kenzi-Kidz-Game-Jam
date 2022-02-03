@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Splash : MonoBehaviour
 {
+    public ParticleSystem splash;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,16 @@ public class Splash : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter(Collision other) 
+    {
+        if (other.gameObject.tag == "floor")
+        {
+            var main = splash.main;
+            splash.transform.position = this.transform.position;
+            main.startColor = this.gameObject.GetComponent<Renderer>().material.color;
+            splash.Play();
+        }
+    }
 }
+
