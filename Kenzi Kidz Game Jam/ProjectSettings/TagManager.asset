@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - floor
+  - DiskSlice
+  - Slit
+  - GM
   layers:
   - Default
   - TransparentFX
