@@ -26,4 +26,10 @@ public class GM : MonoBehaviour
         Debug.Log("You Lost:(");
     }
 
+    public void Pause()
+    {
+        if(Time.timeScale == 1f){Time.timeScale = 0f;}
+        else if(Time.timeScale == 0f){Time.timeScale = 1f;}
+        
+    }
 }

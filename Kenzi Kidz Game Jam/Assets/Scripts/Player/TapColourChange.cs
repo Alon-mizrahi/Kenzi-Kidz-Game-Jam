@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TapColourChange : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     int CurrColour= 0;
     public string Colour;
@@ -28,4 +30,27 @@ public class TapColourChange : MonoBehaviour
         }
 
     }
+
+
+/*
+//For Animation States and Speeds
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
+        {
+            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset == 0)
+            {
+                gameObject.GetComponent<Animator>().speed=1.7f;
+            }
+            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset > 0)
+            {
+                gameObject.GetComponent<Animator>().speed=1.9f;
+            }
+            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)
+            {
+                gameObject.GetComponent<Animator>().speed = -gameObject.GetComponent<Animator>().speed;
+            }
+        }
+    }
+*/
+
 }
