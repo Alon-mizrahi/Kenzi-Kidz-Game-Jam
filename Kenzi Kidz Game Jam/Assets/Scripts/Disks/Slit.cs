@@ -44,10 +44,13 @@ public class Slit : MonoBehaviour
         {   
             PlayerColour = other.gameObject.GetComponent<TapColourChange>().Colour;
             
-            if(CompareColours()  && isComplete == false)//correct colour
+            if(CompareColours())//correct colour
             {
                 ChangeColour(other.gameObject);
-                FindObjectOfType<TapColourChange>().colourSplash();
+                if (isComplete == false)
+                {
+                    FindObjectOfType<TapColourChange>().colourSplash();
+                }
             }
             else{
                 GM.Fail();

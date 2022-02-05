@@ -12,7 +12,6 @@ public class TapColourChange : MonoBehaviour
     public ParticleSystem splash;
 
     public bool hasStarted = false;
-    bool onStartBlock = true;
     public GM GM;
 
     Animator CubeRoll;
@@ -35,7 +34,7 @@ public class TapColourChange : MonoBehaviour
 
         //Tap to change colour mechanic
         
-        if( Input.GetMouseButtonDown(1) && hasStarted) //Input.GetTouch(0).phase == TouchPhase.Began
+        if( Input.GetMouseButtonDown(1) && (hasStarted == true)) //Input.GetTouch(0).phase == TouchPhase.Began
         {
             
             if(CurrColour ==0){ CurrColour=1; Colour = "Blue";}
@@ -46,9 +45,8 @@ public class TapColourChange : MonoBehaviour
             colourSplash();
         }
         
-        if(onStartBlock && Input.GetMouseButtonDown(1))
+        if(hasStarted == true)
         {
-            hasStarted = true;
             GM.StartScoreCount();
         }
 
@@ -86,12 +84,6 @@ public class TapColourChange : MonoBehaviour
                 CubeRoll.Play("BackwardsRoll");
             }
         }
-
-        if(other.gameObject.tag == "StartDisk")
-        {
-            onStartBlock = true;
-        }
-
 
     }
 

@@ -23,11 +23,12 @@ private void Start() {
 
         transform.Rotate(_rotation*Time.deltaTime);
 
-        if(Player.hasStarted){
+        if(Input.GetMouseButtonDown(1)){
             //gameObject.SetActive(false);
+            Player.hasStarted = true;
             for (int i=0; i<allChildren.Length; i++){
                 allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
-                allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(5f, Vector3.zero, 1f, 3f);
+                allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(20f, Vector3.zero, 3f, 1f);
             }
         }
     }
