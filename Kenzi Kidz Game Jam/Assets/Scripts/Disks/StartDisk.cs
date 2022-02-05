@@ -27,7 +27,7 @@ private void Start() {
         if(Input.GetMouseButtonDown(1)){
             for (int i=0; i<allChildren.Length; i++){
                 allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
-                allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(20f, Vector3.zero, 3f, 1f);
+                allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(20f, Vector3.zero, 3f, 1f, ForceMode.VelocityChange);
             }
 
             Player.hasStarted = true;
