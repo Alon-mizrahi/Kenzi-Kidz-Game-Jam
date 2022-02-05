@@ -43,7 +43,7 @@ public class Slit : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {   
             PlayerColour = other.gameObject.GetComponent<TapColourChange>().Colour;
-            other.gameObject.GetComponent<AudioSource>().Play();
+            
             if(CompareColours())//correct colour
             {
                 ChangeColour(other.gameObject);
@@ -111,6 +111,7 @@ public class Slit : MonoBehaviour
                         gameObject.GetComponent<Renderer>().material = MaterialList[i];
                         if (isComplete == false)
                         {
+                            Player.gameObject.GetComponent<AudioSource>().Play();
                             FindObjectOfType<TapColourChange>().colourSplash();
                         }
                         break;
@@ -169,6 +170,7 @@ public class Slit : MonoBehaviour
                     gameObject.GetComponent<Renderer>().material = MaterialList[i];
                     if (isComplete == false)
                     {
+                        Player.gameObject.GetComponent<AudioSource>().Play();
                         FindObjectOfType<TapColourChange>().colourSplash();
                     }
                     break;

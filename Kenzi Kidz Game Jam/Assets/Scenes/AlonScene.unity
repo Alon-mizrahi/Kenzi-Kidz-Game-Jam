@@ -381,7 +381,7 @@ MonoBehaviour:
   Wintxt: {fileID: 1146758081}
   Failtxt: {fileID: 425629255}
   StartTxt: {fileID: 852839102}
-  FinalScore: {fileID: 0}
+  FinalScore: {fileID: 1013237018}
 --- !u!4 &246444528
 Transform:
   m_ObjectHideFlags: 0
