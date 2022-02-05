@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;//skrr skrr
 
 public class GM : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class GM : MonoBehaviour
     {
         Debug.Log("You Won!");
         Wintxt.enabled = true;
-        EndOfRoundDisplay.enabled = true;
+        EndOfRoundDisplay.gameObject.SetActive(true);
     }
 
     // Call to activate fail condition.
@@ -38,8 +39,7 @@ public class GM : MonoBehaviour
     {
         Debug.Log("You Lost:(");
         Failtxt.enabled = true;
-        EndOfRoundDisplay.enabled = true;
-        EndOfRoundDisplay.enabled = true;
+        EndOfRoundDisplay.gameObject.SetActive(true);
     }
 
     // Called from Pause button GUI. 
@@ -48,6 +48,11 @@ public class GM : MonoBehaviour
     {
         if(Time.timeScale == 1f){Time.timeScale = 0f;}
         else if(Time.timeScale == 0f){Time.timeScale = 1f;}
+        
+    }
+
+    public void StartScoreCount()
+    {
         
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Slit
   - GM
   - Kill
+  - StartDisk
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,10 @@ public class TapColourChange : MonoBehaviour
     public string Colour;
     public ParticleSystem splash;
 
+    public bool hasStarted = false;
+    bool onStartBlock = true;
+    public GM GM;
+
     Animator CubeRoll;
 
     public Material[] Colours = new Material[3];
@@ -25,9 +29,13 @@ public class TapColourChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
+
         //Tap to change colour mechanic
         
-        if( Input.GetMouseButtonDown(1)) //Input.GetTouch(0).phase == TouchPhase.Began
+        if( Input.GetMouseButtonDown(1) && hasStarted) //Input.GetTouch(0).phase == TouchPhase.Began
         {
             
             if(CurrColour ==0){ CurrColour=1; Colour = "Blue";}
@@ -37,6 +45,13 @@ public class TapColourChange : MonoBehaviour
             gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
             colourSplash();
         }
+        
+        if(onStartBlock && Input.GetMouseButtonDown(1))
+        {
+            hasStarted = true;
+            GM.StartScoreCount();
+        }
+
 
     }
 
@@ -54,10 +69,10 @@ public class TapColourChange : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
-            //if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset == 0)
-            //{
-                
-            //}
+
+
+
+
             if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
             {
                 
@@ -71,6 +86,13 @@ public class TapColourChange : MonoBehaviour
                 CubeRoll.Play("BackwardsRoll");
             }
         }
+
+        if(other.gameObject.tag == "StartDisk")
+        {
+            onStartBlock = true;
+        }
+
+
     }
 
 

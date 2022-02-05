@@ -17,7 +17,6 @@ public Material Colour;
 public float RotationOffset = 0f;
 Vector3 _rotation = new Vector3 (0,0,0);
 
-
 private void Awake() {
     if(Colour.name == "Blue" || Colour.name == "Yellow" || Colour.name == "Red"){isPrimary = true;}
     else{isPrimary = false;}
