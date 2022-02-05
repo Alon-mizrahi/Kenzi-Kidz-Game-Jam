@@ -11,6 +11,7 @@ public float RotationOffset = 0f;
 Vector3 _rotation = new Vector3 (0,0,0);
 
 public TapColourChange Player;
+public GM GM;
 
 
 private void Start() {
@@ -19,17 +20,18 @@ private void Start() {
     allChildren = gameObject.GetComponentsInChildren<Transform>();
 }
 
-    private void Update() {
+    private void LateUpdate() {
 
         transform.Rotate(_rotation*Time.deltaTime);
 
         if(Input.GetMouseButtonDown(1)){
-            //gameObject.SetActive(false);
-            Player.hasStarted = true;
             for (int i=0; i<allChildren.Length; i++){
                 allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
                 allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(20f, Vector3.zero, 3f, 1f);
             }
+
+            Player.hasStarted = true;
+            GM.StartScoreCount();
         }
     }
 
