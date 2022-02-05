@@ -44,9 +44,10 @@ public class Slit : MonoBehaviour
         {   
             PlayerColour = other.gameObject.GetComponent<TapColourChange>().Colour;
             
-            if(CompareColours())//correct colour
+            if(CompareColours()  && isComplete == false)//correct colour
             {
                 ChangeColour(other.gameObject);
+                FindObjectOfType<TapColourChange>().colourSplash();
             }
             else{
                 GM.Fail();
@@ -71,7 +72,10 @@ public class Slit : MonoBehaviour
     {
         for(int i = 0; i<TargetColours.Length; i++ )
         {
-            if(PlayerColour == TargetColours[i]){ return true;}
+            if(PlayerColour == TargetColours[i])
+            { 
+                return true;
+            }
         }
         return false;
     }
@@ -89,6 +93,7 @@ public class Slit : MonoBehaviour
                 {
                     if(SlitColour == MaterialList[i].name)
                     {
+                        //FindObjectOfType<TapColourChange>().colourSplash();
                         gameObject.GetComponent<Renderer>().material = MaterialList[i];
                         break;
                     }
@@ -142,30 +147,17 @@ public class Slit : MonoBehaviour
             {
                 if(SlitColour == MaterialList[i].name)
                 {
+                    //FindObjectOfType<TapColourChange>().colourSplash();
                     gameObject.GetComponent<Renderer>().material = MaterialList[i];
                     break;
                 }
             }
-
-
         }
 
-
-        
-        
-
-
-        
         if(SlitColour == BaseColour)
         {
             isComplete = true;
         }
-
-
-        
-        
-
-
     }
 
 }
