@@ -62,15 +62,13 @@ private void Start() {
             transform.Rotate(_rotation*Time.deltaTime);
 
             if(DiskComplete()){
-                gameObject.SetActive(false);
-                //this.transform.DetachChildren();
+                //gameObject.SetActive(false);
+                for (int i=0; i<allChildren.Length; i++){
+                    allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
+                    allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(5f, Vector3.zero, 1f, 3f);
+                }
             }
         }
-        
-        
-
-        
-        
     }
 
 
@@ -85,6 +83,4 @@ private void Start() {
         }
         return true;
     }
-
-
 }
