@@ -13,6 +13,7 @@ public class GM : MonoBehaviour
     public Text Wintxt;
     public Text Failtxt;
 
+    public Text StartTxt;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,23 @@ public class GM : MonoBehaviour
 
     public void StartScoreCount()
     {
+        StartTxt.enabled = false;
         
+
+
+    }
+
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void Next()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }

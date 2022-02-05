@@ -28,10 +28,6 @@ public class TapColourChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-
-
         //Tap to change colour mechanic
         
         if( Input.GetMouseButtonDown(1) && (hasStarted == true)) //Input.GetTouch(0).phase == TouchPhase.Began
@@ -44,13 +40,6 @@ public class TapColourChange : MonoBehaviour
             gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
             colourSplash();
         }
-        
-        if(hasStarted == true)
-        {
-            GM.StartScoreCount();
-        }
-
-
     }
 
     //Colour vfx testing below
