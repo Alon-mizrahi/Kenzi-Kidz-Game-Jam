@@ -338,23 +338,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8513859187771203891, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
   m_PrefabInstance: {fileID: 1815101308}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &138655587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138655585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d1cca9a6c9e524ebe48f037f02c2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseColour: 
-  SlitColour: 
-  TargetColours:
-  - Blue
-  isComplete: 0
 --- !u!64 &138655588
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -504,7 +487,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
       propertyPath: m_LocalScale.x
@@ -881,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalSlits:
-  - {fileID: 1646035748}
+  - {fileID: 1260455348}
   - {fileID: 1260455348}
   - {fileID: 0}
   - {fileID: 0}
@@ -894,7 +877,7 @@ MonoBehaviour:
   - {fileID: 0}
   isPrimary: 1
   Colour: {fileID: 2100000, guid: 8d019268084bd554dae316747e13aded, type: 2}
-  RotationOffset: -192
+  RotationOffset: 0
 --- !u!65 &278101873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1298,7 +1281,7 @@ MonoBehaviour:
   BaseColour: 
   SlitColour: 
   TargetColours:
-  - Blue
+  - Red
   isComplete: 0
 --- !u!54 &400520162
 Rigidbody:
@@ -1866,7 +1849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalSlits:
-  - {fileID: 1900697183}
+  - {fileID: 1114485325}
   - {fileID: 2083026273}
   - {fileID: 0}
   - {fileID: 0}
@@ -7476,6 +7459,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1114485329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114485325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d1cca9a6c9e524ebe48f037f02c2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseColour: 
+  SlitColour: 
+  TargetColours:
+  - Yellow
+  isComplete: 0
 --- !u!1 &1146758078
 GameObject:
   m_ObjectHideFlags: 0
@@ -7607,7 +7607,7 @@ MonoBehaviour:
   - {fileID: 0}
   isPrimary: 1
   Colour: {fileID: 2100000, guid: 8baa560ce56b782498abdb36211248cd, type: 2}
-  RotationOffset: 0
+  RotationOffset: -192
 --- !u!65 &1244070200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7955,9 +7955,9 @@ Transform:
   - {fileID: 373885033879796838}
   - {fileID: 278101871}
   - {fileID: 1244070198}
-  - {fileID: 543450652307394289}
   - {fileID: 582618183}
   - {fileID: 2107505915}
+  - {fileID: 543450652307394289}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8015,7 +8015,7 @@ MonoBehaviour:
   BaseColour: 
   SlitColour: 
   TargetColours:
-  - Blue
+  - Red
   isComplete: 0
 --- !u!54 &1432493729
 Rigidbody:
@@ -8338,7 +8338,7 @@ MonoBehaviour:
   BaseColour: 
   SlitColour: 
   TargetColours:
-  - Blue
+  - Red
   isComplete: 0
 --- !u!64 &1489193928
 MeshCollider:
@@ -8654,24 +8654,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8513859187771203891, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
   m_PrefabInstance: {fileID: 1310527770}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1646035750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646035748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d1cca9a6c9e524ebe48f037f02c2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseColour: 
-  SlitColour: 
-  TargetColours:
-  - Yellow
-  - Red
-  isComplete: 0
 --- !u!64 &1646035751
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9093,7 +9075,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
       propertyPath: m_LocalScale.x
@@ -9254,23 +9236,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8513859187771203891, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
   m_PrefabInstance: {fileID: 210707099}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1900697185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900697183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d1cca9a6c9e524ebe48f037f02c2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseColour: 
-  SlitColour: 
-  TargetColours:
-  - Blue
-  isComplete: 0
 --- !u!64 &1900697186
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9833,7 +9798,7 @@ MonoBehaviour:
   BaseColour: 
   SlitColour: 
   TargetColours:
-  - Blue
+  - Yellow
   isComplete: 0
 --- !u!64 &2083026276
 MeshCollider:
@@ -9888,7 +9853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalSlits:
-  - {fileID: 138655585}
+  - {fileID: 1489193925}
   - {fileID: 1489193925}
   - {fileID: 0}
   - {fileID: 0}
@@ -9901,7 +9866,7 @@ MonoBehaviour:
   - {fileID: 0}
   isPrimary: 1
   Colour: {fileID: 2100000, guid: 8baa560ce56b782498abdb36211248cd, type: 2}
-  RotationOffset: 0
+  RotationOffset: -192
 --- !u!65 &2107505917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10054,7 +10019,7 @@ PrefabInstance:
       objectReference: {fileID: 246444527}
     - target: {fileID: 8594646024038181572, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8594646024038181572, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_LocalPosition.x
