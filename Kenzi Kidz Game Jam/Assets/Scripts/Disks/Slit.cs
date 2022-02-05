@@ -73,14 +73,20 @@ public class Slit : MonoBehaviour
 
     bool CompareColours()
     {
-        for(int i = 0; i<TargetColours.Length; i++ )
+
+        if(!isComplete)
         {
-            if(PlayerColour == TargetColours[i])
-            { 
-                return true;
+           for(int i = 0; i<TargetColours.Length; i++ )
+            {
+                if(PlayerColour == TargetColours[i])
+                { 
+                    return true;
+                }
             }
+            return false; 
         }
-        return false;
+        return true;
+        
     }
 
     void ChangeColour(GameObject Player)
