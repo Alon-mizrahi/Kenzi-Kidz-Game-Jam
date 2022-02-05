@@ -70,6 +70,13 @@ private void Start() {
         }
     }
 
+    private void OnTriggerEnter(Collider other) {
+        if(other.tag == "Player")
+        {
+            //other.gameObject.GetComponent<AudioSource>().Play();
+        }
+    }
+
 
     bool DiskComplete()
     {
