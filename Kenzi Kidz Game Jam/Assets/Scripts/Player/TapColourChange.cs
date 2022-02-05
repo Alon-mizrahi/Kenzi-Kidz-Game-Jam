@@ -9,6 +9,7 @@ public class TapColourChange : MonoBehaviour
     // Start is called before the first frame update
     int CurrColour= 0;
     public string Colour;
+    public ParticleSystem splash;
 
     public Material[] Colours = new Material[3];
     void Start()
@@ -22,11 +23,19 @@ public class TapColourChange : MonoBehaviour
     {
         if( Input.GetMouseButtonDown(0)) //Input.GetTouch(0).phase == TouchPhase.Began
         {
+            
             if(CurrColour ==0){ CurrColour=1; Colour = "Blue";}
             else if(CurrColour ==1){CurrColour=2; Colour = "Yellow";}
             else if(CurrColour ==2){CurrColour=0; Colour = "Red";}
 
             gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
+            
+
+            //Colour vfx testing below
+            var main = splash.main;
+            main.startColor = this.gameObject.GetComponent<Renderer>().material.color;
+            splash.transform.position = this.gameObject.transform.position;
+            splash.Play();
         }
 
     }
