@@ -61,7 +61,10 @@ private void Start() {
         {
             transform.Rotate(_rotation*Time.deltaTime);
 
-            if(DiskComplete()){gameObject.SetActive(false);}
+            if(DiskComplete()){
+                gameObject.SetActive(false);
+                //this.transform.DetachChildren();
+            }
         }
         
         

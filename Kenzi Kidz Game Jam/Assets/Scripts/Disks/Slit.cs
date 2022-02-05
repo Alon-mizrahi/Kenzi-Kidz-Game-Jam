@@ -76,7 +76,6 @@ public class Slit : MonoBehaviour
         return false;
     }
 
-
     void ChangeColour(GameObject Player)
     {
         //If Disk Primary Colour Slit is White??

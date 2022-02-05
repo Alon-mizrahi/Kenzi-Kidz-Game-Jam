@@ -21,6 +21,8 @@ public class TapColourChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Tap to change colour mechanic
+        
         if( Input.GetMouseButtonDown(0)) //Input.GetTouch(0).phase == TouchPhase.Began
         {
             
@@ -29,15 +31,17 @@ public class TapColourChange : MonoBehaviour
             else if(CurrColour ==2){CurrColour=0; Colour = "Red";}
 
             gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
-            
+            colourSplash();
+        }
 
-            //Colour vfx testing below
+    }
+
+    //Colour vfx testing below
+    public void colourSplash(){
             var main = splash.main;
             main.startColor = this.gameObject.GetComponent<Renderer>().material.color;
             splash.transform.position = this.gameObject.transform.position;
             splash.Play();
-        }
-
     }
 
 
