@@ -14,33 +14,53 @@ public class GM : MonoBehaviour
     public Text Failtxt;
 
     public Text StartTxt;
+    public Text FinalScore;
+
+    bool isScoring = false;
+    float time;
+    float ScoreVal=100f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Score.text =""+ScoreVal;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isScoring && ScoreVal>0)
+        {
+            ScoreVal -= Time.deltaTime*1.5f;
+            Score.text = ""+(int) ScoreVal;
+        }
+        else if(ScoreVal <=0)
+        {
+            Fail();
+        }
     }
 
     // Call to activate win condition.
     public void Win()
     {
+        isScoring = false;
         Debug.Log("You Won!");
         Wintxt.enabled = true;
         EndOfRoundDisplay.gameObject.SetActive(true);
+
+        FinalScore.text = ""+ ScoreVal;
+
+
     }
 
     // Call to activate fail condition.
     public void Fail()
     {
+        isScoring = false;
         Debug.Log("You Lost:(");
         Failtxt.enabled = true;
         EndOfRoundDisplay.gameObject.SetActive(true);
+        FinalScore.text = "000";
     }
 
     // Called from Pause button GUI. 
@@ -55,9 +75,7 @@ public class GM : MonoBehaviour
     public void StartScoreCount()
     {
         StartTxt.enabled = false;
-        
-
-
+        isScoring = true;
     }
 
 
