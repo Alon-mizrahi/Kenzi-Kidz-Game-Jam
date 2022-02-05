@@ -11,9 +11,13 @@ public class TapColourChange : MonoBehaviour
     public string Colour;
     public ParticleSystem splash;
 
+    Animator CubeRoll;
+
     public Material[] Colours = new Material[3];
     void Start()
     {
+        CubeRoll = gameObject.GetComponent<Animator>();
+
         gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
         Colour = "Red";
     }
@@ -23,7 +27,7 @@ public class TapColourChange : MonoBehaviour
     {
         //Tap to change colour mechanic
         
-        if( Input.GetMouseButtonDown(0)) //Input.GetTouch(0).phase == TouchPhase.Began
+        if( Input.GetMouseButtonDown(1)) //Input.GetTouch(0).phase == TouchPhase.Began
         {
             
             if(CurrColour ==0){ CurrColour=1; Colour = "Blue";}
@@ -45,25 +49,29 @@ public class TapColourChange : MonoBehaviour
     }
 
 
-/*
+
 //For Animation States and Speeds
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
-            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset == 0)
+            //if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset == 0)
+            //{
+                
+            //}
+            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
             {
-                gameObject.GetComponent<Animator>().speed=1.7f;
+                
+                CubeRoll.Play("CubeRoll");
+                //CubeRoll.StopPlayback("F");
+                
+
             }
-            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset > 0)
+            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
             {
-                gameObject.GetComponent<Animator>().speed=1.9f;
-            }
-            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)
-            {
-                gameObject.GetComponent<Animator>().speed = -gameObject.GetComponent<Animator>().speed;
+                CubeRoll.Play("BackwardsRoll");
             }
         }
     }
-*/
+
 
 }

@@ -31,7 +31,6 @@ public class GM : MonoBehaviour
         Debug.Log("You Won!");
         Wintxt.enabled = true;
         EndOfRoundDisplay.enabled = true;
-
     }
 
     // Call to activate fail condition.
@@ -39,6 +38,8 @@ public class GM : MonoBehaviour
     {
         Debug.Log("You Lost:(");
         Failtxt.enabled = true;
+        EndOfRoundDisplay.enabled = true;
+        EndOfRoundDisplay.enabled = true;
     }
 
     // Called from Pause button GUI. 
