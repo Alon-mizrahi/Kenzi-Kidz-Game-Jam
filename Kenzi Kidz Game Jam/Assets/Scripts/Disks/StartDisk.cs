@@ -34,12 +34,14 @@ private void Start() {
                 allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce, ForceMode.Impulse);
             }
 
-            Player.hasStarted = true;
+            
             GM.StartScoreCount();
             if (audioPlay == false){
                 GM.GetComponent<AudioSource>().Play();
                 audioPlay = true;
-            } 
+            }
+
+            Player.hasStarted = true;
         }
     }
 

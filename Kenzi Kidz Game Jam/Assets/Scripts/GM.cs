@@ -18,6 +18,9 @@ public class GM : MonoBehaviour
 
     public Image PauseDisplay;
 
+    public AudioClip WinSound;
+    public AudioClip FailSound;
+
     bool isScoring = false;
     float time;
     float ScoreVal=100f;
@@ -52,6 +55,8 @@ public class GM : MonoBehaviour
         EndOfRoundDisplay.gameObject.SetActive(true);
 
         FinalScore.text = ""+ ScoreVal;
+        gameObject.GetComponent<AudioSource>().clip = WinSound;
+        gameObject.GetComponent<AudioSource>().Play();
 
 
     }
@@ -59,12 +64,14 @@ public class GM : MonoBehaviour
     // Call to activate fail condition.
     public void Fail()
     {
-        Time.timeScale= 0f;
+        gameObject.GetComponent<AudioSource>().clip = FailSound;
+        gameObject.GetComponent<AudioSource>().Play();
         isScoring = false;
         Debug.Log("You Lost:(");
         Failtxt.enabled = true;
         EndOfRoundDisplay.gameObject.SetActive(true);
         FinalScore.text = "000";
+        Time.timeScale= 0f;
     }
 
     // Called from Pause button GUI. 
