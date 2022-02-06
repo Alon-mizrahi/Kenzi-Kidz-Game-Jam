@@ -64,7 +64,7 @@ private void Start() {
                 //gameObject.SetActive(false);
                 for (int i=0; i<allChildren.Length; i++){
                     allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
-                    allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(10f, Vector3.zero, 3f, 1f);
+                    allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(30f, Vector3.zero, 3f, 1f);
                 }
             }
         }
