@@ -55,7 +55,8 @@ public class TapColourChange : MonoBehaviour
 
 
 //For Animation States and Speeds
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter(Collision other) 
+    {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
             if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0)
@@ -67,10 +68,17 @@ public class TapColourChange : MonoBehaviour
             }
             else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
             {
-                CubeRoll.Play("BackwardsRoll");
-                JellyRoll.Play("JellyBackRoll");
+                if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
+                {
+                    CubeRoll.Play("CubeRoll");
+                    JellyRoll.Play("JellyRoll");  
+                } 
+                else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
+                {
+                    CubeRoll.Play("BackwardsRoll");
+                    JellyRoll.Play("JellyBackRoll");
+                }
             }
-            
         }
 
     }

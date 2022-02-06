@@ -35,8 +35,12 @@ private void Start() {
         if(Input.GetMouseButtonDown(1) && broken==false){
             broken = true;
             for (int i=0; i<allChildren.Length; i++){
-                allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
-                allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce, ForceMode.Impulse);
+                if( allChildren[i] != null)
+                {
+                   allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
+                    allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce, ForceMode.Impulse); 
+                }
+                
             }
 
             

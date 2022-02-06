@@ -13,7 +13,7 @@ public class Slit : MonoBehaviour
 
     public string[] TargetColours;
 
-
+    bool _Failed = false;
     public bool isComplete = false;
     GM GM;
 
@@ -53,7 +53,8 @@ public class Slit : MonoBehaviour
                 // }
             }
             else{
-                GM.Fail();
+                if(!_Failed){_Failed=true;GM.Fail();}
+                
             }
         }
     }
@@ -64,8 +65,9 @@ public class Slit : MonoBehaviour
             
             PlayerColour = other.gameObject.GetComponent<TapColourChange>().Colour;
             
-            if(!CompareColours())//Wrong colour
+            if(!CompareColours() && !_Failed)//Wrong colour
             {
+                _Failed=true;
                 GM.Fail();
             }
         }
