@@ -70,7 +70,7 @@ private void Start() {
                     allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
 
                     //allChildren[i].GetComponentInChildren<Rigidbody>().AddForce();
-                    allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce , ForceMode.Impulse);
+                    allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce, ForceMode.Impulse);
 
                     //allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(30f,, 3f, 1f);
                 }
