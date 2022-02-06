@@ -26,6 +26,7 @@ public class GM : MonoBehaviour
     void Start()
     {
         Score.text =""+ScoreVal;
+        Time.timeScale= 1f;
     }
 
     // Update is called once per frame
@@ -58,6 +59,7 @@ public class GM : MonoBehaviour
     // Call to activate fail condition.
     public void Fail()
     {
+        Time.timeScale= 0f;
         isScoring = false;
         Debug.Log("You Lost:(");
         Failtxt.enabled = true;

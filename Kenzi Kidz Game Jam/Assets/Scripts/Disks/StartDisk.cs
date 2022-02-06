@@ -10,6 +10,8 @@ Transform[] allChildren;
 public float RotationOffset = 0f;
 Vector3 _rotation = new Vector3 (0,0,0);
 
+public Vector3 ExplodeForce;
+
 public TapColourChange Player;
 public GM GM;
 
@@ -29,7 +31,7 @@ private void Start() {
         if(Input.GetMouseButtonDown(1)){
             for (int i=0; i<allChildren.Length; i++){
                 allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
-                allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(50f, Vector3.zero, 3f, 1f, ForceMode.VelocityChange);
+                allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce, ForceMode.Impulse);
             }
 
             Player.hasStarted = true;

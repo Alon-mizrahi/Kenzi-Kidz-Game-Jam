@@ -200,6 +200,7 @@ MonoBehaviour:
   RotationOffset: 0
   Player: {fileID: 0}
   GM: {fileID: 0}
+  audioPlay: 0
 --- !u!1 &3056327679929415898
 GameObject:
   m_ObjectHideFlags: 0
