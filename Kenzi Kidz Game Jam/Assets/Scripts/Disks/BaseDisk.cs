@@ -64,7 +64,6 @@ private void Start() {
 
             if(DiskComplete()){
                 //gameObject.SetActive(false);
-                gm.GetComponent<AudioSource>().Play();
                 for (int i=0; i<allChildren.Length; i++){
                     allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
                     allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(10f, Vector3.zero, 3f, 1f);
@@ -90,6 +89,7 @@ private void Start() {
                 return false;
             }
         }
+        gm.GetComponent<AudioSource>().Play();
         return true;
     }
 }
