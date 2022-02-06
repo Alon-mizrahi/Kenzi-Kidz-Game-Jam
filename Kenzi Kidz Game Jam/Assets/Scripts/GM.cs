@@ -16,6 +16,8 @@ public class GM : MonoBehaviour
     public Text StartTxt;
     public Text FinalScore;
 
+    public Image PauseDisplay;
+
     bool isScoring = false;
     float time;
     float ScoreVal=100f;
@@ -67,8 +69,16 @@ public class GM : MonoBehaviour
     // Activate pause menu
     public void Pause()
     {
-        if(Time.timeScale == 1f){Time.timeScale = 0f;}
-        else if(Time.timeScale == 0f){Time.timeScale = 1f;}
+        if(Time.timeScale == 1f)
+        {
+            Time.timeScale = 0f;
+            PauseDisplay.gameObject.SetActive(true);
+        }
+        else if(Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            PauseDisplay.gameObject.SetActive(false);
+        }
         
     }
 
