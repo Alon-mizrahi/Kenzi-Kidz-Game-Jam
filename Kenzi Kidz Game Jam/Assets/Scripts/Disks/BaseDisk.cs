@@ -13,6 +13,8 @@ public bool isPrimary;
 Transform[] allChildren;
 public Material Colour;
 
+public GM gm;
+
 //Individual Rotation
 public float RotationOffset = 0f;
 Vector3 _rotation = new Vector3 (0,0,0);
@@ -62,6 +64,7 @@ private void Start() {
 
             if(DiskComplete()){
                 //gameObject.SetActive(false);
+                gm.GetComponent<AudioSource>().Play();
                 for (int i=0; i<allChildren.Length; i++){
                     allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
                     allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(30f, Vector3.zero, 3f, 1f);

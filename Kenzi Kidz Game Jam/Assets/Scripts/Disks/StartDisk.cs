@@ -13,11 +13,13 @@ Vector3 _rotation = new Vector3 (0,0,0);
 public TapColourChange Player;
 public GM GM;
 
-
+public bool audioPlay;
 private void Start() {
     _rotation = new Vector3(0,RotationOffset,0);
 
     allChildren = gameObject.GetComponentsInChildren<Transform>();
+
+    audioPlay = false;
 }
 
     private void LateUpdate() {
@@ -32,6 +34,10 @@ private void Start() {
 
             Player.hasStarted = true;
             GM.StartScoreCount();
+            if (audioPlay == false){
+                GM.GetComponent<AudioSource>().Play();
+                audioPlay = true;
+            } 
         }
     }
 
