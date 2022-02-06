@@ -57,15 +57,20 @@ public class TapColourChange : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
-            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0 && !EndofRound) // forwards roll
-            { 
-                CubeRoll.Play("CubeRoll");
-                //CubeRoll.StopPlayback("F");
-            }
-            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0 && !EndofRound)// Backwards roll
+            if(other.transform.parent.GetComponent<BaseDisk>() != null)
             {
-                CubeRoll.Play("BackwardsRoll");
+               if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
+                { 
+                    CubeRoll.Play("CubeRoll");
+                }
+                else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
+                {
+                    CubeRoll.Play("BackwardsRoll");
+                } 
+            }else{
+                CubeRoll.Play("CubeRoll");
             }
+            
         }
 
     }
