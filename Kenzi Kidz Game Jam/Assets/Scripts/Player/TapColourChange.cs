@@ -59,25 +59,15 @@ public class TapColourChange : MonoBehaviour
     {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
-            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0)
-            {    
+            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
+            {
                 CubeRoll.Play("CubeRoll");
-                JellyRoll.Play("JellyRoll");
-                
-
-            }
+                JellyRoll.Play("JellyRoll");  
+            } 
             else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
             {
-                if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
-                {
-                    CubeRoll.Play("CubeRoll");
-                    JellyRoll.Play("JellyRoll");  
-                } 
-                else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
-                {
-                    CubeRoll.Play("BackwardsRoll");
-                    JellyRoll.Play("JellyBackRoll");
-                }
+                CubeRoll.Play("BackwardsRoll");
+                JellyRoll.Play("JellyBackRoll");
             }
         }
 
