@@ -13,6 +13,8 @@ public bool isPrimary;
 Transform[] allChildren;
 public Material Colour;
 
+public Vector3 ExplodeForce;
+
 public GM gm;
 
 //Individual Rotation
@@ -67,7 +69,11 @@ private void Start() {
                 gm.GetComponent<AudioSource>().Play();
                 for (int i=0; i<allChildren.Length; i++){
                     allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
-                    allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(30f, Vector3.zero, 3f, 1f);
+
+                    //allChildren[i].GetComponentInChildren<Rigidbody>().AddForce();
+                    allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce , ForceMode.Impulse);
+
+                    //allChildren[i].GetComponentInChildren<Rigidbody>().AddExplosionForce(30f,, 3f, 1f);
                 }
             }
         }
