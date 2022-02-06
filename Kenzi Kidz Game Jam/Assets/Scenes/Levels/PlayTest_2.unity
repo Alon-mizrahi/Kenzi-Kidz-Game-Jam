@@ -719,6 +719,8 @@ MonoBehaviour:
   StartTxt: {fileID: 852839102}
   FinalScore: {fileID: 1013237018}
   PauseDisplay: {fileID: 1274182373}
+  WinSound: {fileID: 8300000, guid: 2fc4f8eb3c88f5a45bce1368bd31c7bc, type: 3}
+  FailSound: {fileID: 8300000, guid: 40e0fa3b7b5b9cd439788f133a8dd42f, type: 3}
 --- !u!4 &246444528
 Transform:
   m_ObjectHideFlags: 0
