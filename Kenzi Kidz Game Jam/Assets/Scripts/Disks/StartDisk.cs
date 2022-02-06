@@ -15,6 +15,8 @@ public Vector3 ExplodeForce;
 public TapColourChange Player;
 public GM GM;
 
+public bool broken;
+
 public bool audioPlay;
 private void Start() {
     _rotation = new Vector3(0,RotationOffset,0);
@@ -22,13 +24,16 @@ private void Start() {
     allChildren = gameObject.GetComponentsInChildren<Transform>();
 
     audioPlay = false;
+
+    broken = false;
 }
 
     private void LateUpdate() {
 
         transform.Rotate(_rotation*Time.deltaTime);
 
-        if(Input.GetMouseButtonDown(1)){
+        if(Input.GetMouseButtonDown(1) && broken==false){
+            broken = true;
             for (int i=0; i<allChildren.Length; i++){
                 allChildren[i].GetComponentInChildren<Rigidbody>().isKinematic = false;
                 allChildren[i].GetComponentInChildren<Rigidbody>().AddRelativeForce(ExplodeForce, ForceMode.Impulse);

@@ -7,7 +7,7 @@ public class TapColourChange : MonoBehaviour
 
 
     // Start is called before the first frame update
-    int CurrColour= 0;
+    public int CurrColour= 0;
     public string Colour;
     public ParticleSystem splash;
 
@@ -34,9 +34,8 @@ public class TapColourChange : MonoBehaviour
         //Tap to change colour mechanic
         
         if( Input.GetMouseButtonDown(1) && (hasStarted == true)) //Input.GetTouch(0).phase == TouchPhase.Began
-        {
-            
-            if(CurrColour ==0){ CurrColour=1; Colour = "Blue";}
+        {  
+            if(CurrColour ==0){CurrColour=1; Colour = "Blue";}
             else if(CurrColour ==1){CurrColour=2; Colour = "Yellow";}
             else if(CurrColour ==2){CurrColour=0; Colour = "Red";}
 
@@ -59,11 +58,10 @@ public class TapColourChange : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
-            if(other.transform.parent.GetComponent<BaseDisk>() != null)
+            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0)
             {    
                 CubeRoll.Play("CubeRoll");
                 JellyRoll.Play("JellyRoll");
-                //CubeRoll.StopPlayback("F");
                 
 
             }
