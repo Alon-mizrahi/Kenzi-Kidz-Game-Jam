@@ -13,6 +13,7 @@ public class TapColourChange : MonoBehaviour
 
     public bool hasStarted = false;
     public GM GM;
+    public bool EndofRound = false;
 
     Animator CubeRoll;
 
@@ -56,19 +57,12 @@ public class TapColourChange : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
-
-
-
-
-            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
-            {
-                
+            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0 && !EndofRound) // forwards roll
+            { 
                 CubeRoll.Play("CubeRoll");
                 //CubeRoll.StopPlayback("F");
-                
-
             }
-            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
+            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0 && !EndofRound)// Backwards roll
             {
                 CubeRoll.Play("BackwardsRoll");
             }
