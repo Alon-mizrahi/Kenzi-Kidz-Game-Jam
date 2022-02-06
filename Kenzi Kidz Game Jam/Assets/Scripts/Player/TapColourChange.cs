@@ -15,11 +15,13 @@ public class TapColourChange : MonoBehaviour
     public GM GM;
 
     Animator CubeRoll;
+    Animator JellyRoll;
 
     public Material[] Colours = new Material[3];
     void Start()
     {
         CubeRoll = gameObject.GetComponent<Animator>();
+        JellyRoll = gameObject.GetComponent<Animator>();
 
         gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
         Colour = "Red";
@@ -63,14 +65,16 @@ public class TapColourChange : MonoBehaviour
             if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
             {
                 
-                CubeRoll.Play("CubeRoll");
+                //CubeRoll.Play("CubeRoll");
+                JellyRoll.Play("JellyRoll");
                 //CubeRoll.StopPlayback("F");
                 
 
             }
             else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
             {
-                CubeRoll.Play("BackwardsRoll");
+                //CubeRoll.Play("BackwardsRoll");
+                JellyRoll.Play("JellyBackRoll");
             }
         }
 
