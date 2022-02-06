@@ -878,6 +878,8 @@ MonoBehaviour:
   - {fileID: 0}
   isPrimary: 1
   Colour: {fileID: 2100000, guid: 8d019268084bd554dae316747e13aded, type: 2}
+  ExplodeForce: {x: 0, y: 0, z: 0}
+  gm: {fileID: 0}
   RotationOffset: 0
 --- !u!65 &278101873
 BoxCollider:
@@ -1863,6 +1865,8 @@ MonoBehaviour:
   - {fileID: 0}
   isPrimary: 1
   Colour: {fileID: 2100000, guid: 97c117600d1cf8c49a5c6f6ee5344469, type: 2}
+  ExplodeForce: {x: 0, y: 0, z: 0}
+  gm: {fileID: 0}
   RotationOffset: 0
 --- !u!65 &582618185
 BoxCollider:
@@ -7608,6 +7612,8 @@ MonoBehaviour:
   - {fileID: 0}
   isPrimary: 1
   Colour: {fileID: 2100000, guid: 8baa560ce56b782498abdb36211248cd, type: 2}
+  ExplodeForce: {x: 0, y: 0, z: 0}
+  gm: {fileID: 0}
   RotationOffset: -192
 --- !u!65 &1244070200
 BoxCollider:
@@ -9528,6 +9534,7 @@ GameObject:
   - component: {fileID: 2052439749}
   - component: {fileID: 2052439748}
   - component: {fileID: 2052439750}
+  - component: {fileID: 2052439751}
   m_Layer: 0
   m_Name: Player_Cube
   m_TagString: Player
@@ -9762,6 +9769,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2052439751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052439742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809cad3dd53dbbc4e9dacfa8c6703e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Intensity: 0.5
+  Mass: 1
+  stiffness: 1
+  damping: 0.75
 --- !u!1 &2061415464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6919683763462532184, guid: e35ada7b38d6ee241814f04d751a8257, type: 3}
@@ -9964,6 +9987,8 @@ MonoBehaviour:
   - {fileID: 0}
   isPrimary: 1
   Colour: {fileID: 2100000, guid: 8baa560ce56b782498abdb36211248cd, type: 2}
+  ExplodeForce: {x: 0, y: 0, z: 0}
+  gm: {fileID: 0}
   RotationOffset: -192
 --- !u!65 &2107505917
 BoxCollider:
