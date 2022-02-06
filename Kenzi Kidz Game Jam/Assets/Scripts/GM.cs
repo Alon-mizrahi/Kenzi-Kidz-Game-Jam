@@ -22,6 +22,7 @@ public class GM : MonoBehaviour
     public AudioClip FailSound;
 
     bool isScoring = false;
+    bool _Failed= false;
     float time;
     float ScoreVal=100f;
 
@@ -40,7 +41,7 @@ public class GM : MonoBehaviour
             ScoreVal -= Time.deltaTime*1.5f;
             Score.text = ""+(int) ScoreVal;
         }
-        else if(ScoreVal <=0)
+        else if(ScoreVal <=0 && !_Failed)
         {
             Fail();
         }
@@ -64,6 +65,7 @@ public class GM : MonoBehaviour
     // Call to activate fail condition.
     public void Fail()
     {
+        _Failed=true;
         gameObject.GetComponent<AudioSource>().clip = FailSound;
         gameObject.GetComponent<AudioSource>().Play();
         isScoring = false;
