@@ -637,7 +637,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Clinic To ASMR Text
+  m_Text: Can you get to the end?
 --- !u!222 &214732634
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2195,6 +2195,7 @@ MonoBehaviour:
   Colour: {fileID: 2100000, guid: 8baa560ce56b782498abdb36211248cd, type: 2}
   ExplodeForce: {x: 0.3, y: 0, z: 0.7}
   gm: {fileID: 246444527}
+  audioPlay: 0
   RotationOffset: 0
 --- !u!114 &633577531
 MonoBehaviour:
@@ -2315,6 +2316,7 @@ MonoBehaviour:
   Colour: {fileID: 2100000, guid: 9ec7fe8645c3b324a9407dde7e7e52bd, type: 2}
   ExplodeForce: {x: 0.3, y: 0, z: 0.7}
   gm: {fileID: 246444527}
+  audioPlay: 0
   RotationOffset: -192
 --- !u!65 &666063202
 BoxCollider:
@@ -7687,7 +7689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &852839100
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8618,6 +8620,7 @@ MonoBehaviour:
   Colour: {fileID: 2100000, guid: 97c117600d1cf8c49a5c6f6ee5344469, type: 2}
   ExplodeForce: {x: 0.3, y: 0, z: 0.7}
   gm: {fileID: 246444527}
+  audioPlay: 0
   RotationOffset: -192
 --- !u!65 &1226367785
 BoxCollider:
@@ -8886,6 +8889,7 @@ MonoBehaviour:
   Colour: {fileID: 2100000, guid: 8d019268084bd554dae316747e13aded, type: 2}
   ExplodeForce: {x: 0.3, y: 0, z: 0.7}
   gm: {fileID: 246444527}
+  audioPlay: 0
   RotationOffset: 0
 --- !u!65 &1302200832
 BoxCollider:
@@ -11439,6 +11443,7 @@ MonoBehaviour:
   Colour: {fileID: 2100000, guid: 079d94aa366ebef49ad41040014d2206, type: 2}
   ExplodeForce: {x: 0.3, y: 0, z: 0.7}
   gm: {fileID: 246444527}
+  audioPlay: 0
   RotationOffset: 0
 --- !u!65 &2132380357
 BoxCollider:
@@ -11643,6 +11648,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4625047069325989964, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 757028519464fd842be623393123946c, type: 3}
+    - target: {fileID: 8073288535301101132, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073288535301101132, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073288535301101132, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8073288535301101133, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
       propertyPath: GM
       value: 
@@ -11651,9 +11672,33 @@ PrefabInstance:
       propertyPath: splash
       value: 
       objectReference: {fileID: 817948696}
+    - target: {fileID: 8073288535301101134, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073288535301101134, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: damping
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073288535301101134, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: stiffness
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11710,39 +11755,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 498674333677644828, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 609050201326381625, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 1210148611879428471, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 3075392914693694473, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 4788949153364476719, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 4884460339910089939, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5017558422907266311, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5927329358146366009, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 6201621040842704688, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 8128127033094968308, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: GM
@@ -11802,10 +11847,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8898931047018768725, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 8938943399788327038, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938943399788327038, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
+      propertyPath: m_TagString
       value: Goal
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -18,6 +18,8 @@ public class TapColourChange : MonoBehaviour
     Animator CubeRoll;
     Animator JellyRoll;
 
+    public bool AudioPlay;
+
     public Material[] Colours = new Material[3];
     void Start()
     {
@@ -59,27 +61,30 @@ public class TapColourChange : MonoBehaviour
     {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
         {
-            if(other.transform.parent.GetComponent<BaseDisk>() != null)
+            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
             {
-               if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
-                {
-                    CubeRoll.Play("CubeRoll");
-                    JellyRoll.Play("JellyRoll");  
-                } 
-                else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
-                {
-                    CubeRoll.Play("BackwardsRoll");
-                    JellyRoll.Play("JellyBackRoll");
-                } 
-            }else{
                 CubeRoll.Play("CubeRoll");
                 JellyRoll.Play("JellyRoll");  
+            } 
+            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
+            {
+                CubeRoll.Play("BackwardsRoll");
+                JellyRoll.Play("JellyBackRoll");
             }
+        }
 
-            
+        if (other.gameObject.tag == "Goal"){
+            JellyRoll.StopPlayback();
         }
 
     }
 
-
+    private void OnCollisionStay(Collision other) {
+        if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit"){
+            if (other.transform.parent.GetComponent<BaseDisk>().DiskComplete() == true){
+                GM.GetComponent<AudioSource>().Play();
+            }
+        }
+    }
+    
 }
