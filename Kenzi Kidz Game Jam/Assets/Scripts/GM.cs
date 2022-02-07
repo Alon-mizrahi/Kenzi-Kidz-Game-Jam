@@ -65,6 +65,7 @@ public class GM : MonoBehaviour
     // Call to activate fail condition.
     public void Fail()
     {
+        Debug.Log("SKKRRRR");
         _Failed=true;
         gameObject.GetComponent<AudioSource>().clip = FailSound;
         gameObject.GetComponent<AudioSource>().Play();

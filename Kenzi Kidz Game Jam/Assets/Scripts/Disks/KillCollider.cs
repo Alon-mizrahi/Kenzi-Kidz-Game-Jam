@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class KillCollider : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    GM GM;
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Start() {
+        GM =  GameObject.FindGameObjectWithTag("GM").GetComponent<GM>();
         
     }
 
     void OnTriggerEnter(Collider other) {
+
+        if(other.gameObject.tag == "Player")
+        {
+            GM.Fail();
+        }
+
         Destroy(other.gameObject);
     } 
 }
