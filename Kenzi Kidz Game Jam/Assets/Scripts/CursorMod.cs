@@ -17,7 +17,7 @@ public class CursorMod : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(1)){StartCoroutine("Tapped");}
+        if(Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0)){StartCoroutine("Tapped");}
     }
 
     IEnumerator Tapped()
