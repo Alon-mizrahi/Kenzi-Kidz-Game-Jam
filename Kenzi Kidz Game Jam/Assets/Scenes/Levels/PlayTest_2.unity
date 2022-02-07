@@ -11684,6 +11684,10 @@ PrefabInstance:
       propertyPath: stiffness
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 8073288535301101136, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 237cb1109e4673e48bea6d927b39f05a, type: 3}
     - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
       propertyPath: m_RootOrder
       value: 8
