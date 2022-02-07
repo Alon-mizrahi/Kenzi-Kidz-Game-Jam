@@ -55,7 +55,7 @@ public class GM : MonoBehaviour
         Wintxt.enabled = true;
         EndOfRoundDisplay.gameObject.SetActive(true);
 
-        FinalScore.text = ""+ ScoreVal;
+        FinalScore.text = ""+ (int)ScoreVal;
         gameObject.GetComponent<AudioSource>().clip = WinSound;
         gameObject.GetComponent<AudioSource>().Play();
 
