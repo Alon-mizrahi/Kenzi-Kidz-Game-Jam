@@ -11648,6 +11648,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4625047069325989964, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 757028519464fd842be623393123946c, type: 3}
+    - target: {fileID: 8073288535301101132, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073288535301101132, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073288535301101132, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8073288535301101133, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
       propertyPath: GM
       value: 
@@ -11671,6 +11687,18 @@ PrefabInstance:
     - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8611071995761399785, guid: f2b78a316bcede842a69b4de5659e502, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11727,39 +11755,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 498674333677644828, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 609050201326381625, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 1210148611879428471, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 3075392914693694473, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 4788949153364476719, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 4884460339910089939, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5017558422907266311, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5927329358146366009, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 6201621040842704688, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 8128127033094968308, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: GM
@@ -11819,7 +11847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8898931047018768725, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_TagString
-      value: DiskSlice
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 8938943399788327038, guid: af824d4e1b8a14245814f21ddcf61cb8, type: 3}
       propertyPath: m_Name
