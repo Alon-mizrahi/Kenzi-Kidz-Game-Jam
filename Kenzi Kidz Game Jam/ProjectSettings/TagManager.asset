@@ -9,6 +9,7 @@ TagManager:
   - GM
   - Kill
   - StartDisk
+  - Goal
   layers:
   - Default
   - TransparentFX

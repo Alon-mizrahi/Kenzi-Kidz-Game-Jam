@@ -41,6 +41,9 @@ public class TapColourChange : MonoBehaviour
 
             gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
             colourSplash();
+            if (FindObjectOfType<BaseDisk>().DiskComplete() == true){
+                GM.GetComponent<AudioSource>().Play();
+            }
         }
     }
 
@@ -69,6 +72,10 @@ public class TapColourChange : MonoBehaviour
                 CubeRoll.Play("BackwardsRoll");
                 JellyRoll.Play("JellyBackRoll");
             }
+        }
+
+        if (other.gameObject.tag == "Goal"){
+            JellyRoll.StopPlayback();
         }
 
     }

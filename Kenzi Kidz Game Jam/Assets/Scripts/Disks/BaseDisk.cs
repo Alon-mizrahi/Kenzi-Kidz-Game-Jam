@@ -17,6 +17,8 @@ public Vector3 ExplodeForce;
 
 public GM gm;
 
+public bool audioPlay;
+
 //Individual Rotation
 public float RotationOffset = 0f;
 Vector3 _rotation = new Vector3 (0,0,0);
@@ -30,6 +32,8 @@ private void Start() {
     _rotation = new Vector3(0,RotationOffset,0);
 
     allChildren = gameObject.GetComponentsInChildren<Transform>();
+
+    audioPlay = false;
 
     foreach(Transform child in allChildren)
     {
@@ -86,7 +90,7 @@ private void Start() {
     }
 
 
-    bool DiskComplete()
+    public bool DiskComplete()
     {
         for(int i=0; i<TotalSlits.Length; i++)
         {
@@ -95,7 +99,6 @@ private void Start() {
                 return false;
             }
         }
-        gm.GetComponent<AudioSource>().Play();
         return true;
     }
 }
