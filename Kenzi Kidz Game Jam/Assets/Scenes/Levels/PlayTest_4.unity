@@ -868,7 +868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Can you get to the end?
+  m_Text: Click to match the colours
 --- !u!222 &214732634
 CanvasRenderer:
   m_ObjectHideFlags: 0
