@@ -23,8 +23,8 @@ public class TapColourChange : MonoBehaviour
     public Material[] Colours = new Material[3];
     void Start()
     {
-        CubeRoll = gameObject.GetComponent<Animator>();
-        JellyRoll = gameObject.GetComponent<Animator>();
+        // CubeRoll = gameObject.GetComponent<Animator>();
+        // JellyRoll = gameObject.GetComponent<Animator>();
 
         gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
         Colour = "Red";
@@ -57,27 +57,27 @@ public class TapColourChange : MonoBehaviour
 
 
 //For Animation States and Speeds
-    private void OnCollisionEnter(Collision other) 
-    {
-        if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
-        {
-            if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
-            {
-                CubeRoll.Play("CubeRoll");
-                JellyRoll.Play("JellyRoll");  
-            } 
-            else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
-            {
-                CubeRoll.Play("BackwardsRoll");
-                JellyRoll.Play("JellyBackRoll");
-            }
-        }
+    // private void OnCollisionEnter(Collision other) 
+    // {
+    //     if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit")
+    //     {
+    //         if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset >= 0) // forwards roll
+    //         {
+    //             CubeRoll.Play("CubeRoll");
+    //             JellyRoll.Play("JellyRoll");  
+    //         } 
+    //         else if(other.transform.parent.GetComponent<BaseDisk>().RotationOffset < 0)// Backwards roll
+    //         {
+    //             CubeRoll.Play("BackwardsRoll");
+    //             JellyRoll.Play("JellyBackRoll");
+    //         }
+    //     }
 
-        if (other.gameObject.tag == "Goal"){
-            JellyRoll.StopPlayback();
-        }
+    //     if (other.gameObject.tag == "Goal"){
+    //         JellyRoll.StopPlayback();
+    //     }
 
-    }
+    // }
 
     private void OnCollisionStay(Collision other) {
         if(other.gameObject.tag == "DiskSlice" || other.gameObject.tag == "Slit"){
