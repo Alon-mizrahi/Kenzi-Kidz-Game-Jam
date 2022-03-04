@@ -8,7 +8,7 @@ public class GM : MonoBehaviour
 {
 
     //UI Tings
-    public Image EndOfRoundDisplay;
+    //public Image EndOfRoundDisplay;
     public Text Score;
     public Text Wintxt;
     public Text Failtxt;
@@ -53,7 +53,7 @@ public class GM : MonoBehaviour
         isScoring = false;
         Debug.Log("You Won!");
         Wintxt.enabled = true;
-        EndOfRoundDisplay.gameObject.SetActive(true);
+        //EndOfRoundDisplay.gameObject.SetActive(true);
 
         FinalScore.text = ""+ (int)ScoreVal;
         gameObject.GetComponent<AudioSource>().clip = WinSound;
@@ -72,7 +72,7 @@ public class GM : MonoBehaviour
         isScoring = false;
         Debug.Log("You Lost:(");
         Failtxt.enabled = true;
-        EndOfRoundDisplay.gameObject.SetActive(true);
+        //EndOfRoundDisplay.gameObject.SetActive(true);
         FinalScore.text = "000";
         Time.timeScale= 0f;
     }
