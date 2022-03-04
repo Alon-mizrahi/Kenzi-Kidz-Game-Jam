@@ -45,6 +45,8 @@ public class GM : MonoBehaviour
         {
             Fail();
         }
+
+        if(Input.GetKeyDown(KeyCode.R)){Restart();}
     }
 
     // Call to activate win condition.
