@@ -20,7 +20,14 @@ public class TapColourChange : MonoBehaviour
 
     public bool AudioPlay;
 
+    Vector3 startingPos;
+
     public Material[] Colours = new Material[3];
+
+    public float speed = 0;
+
+    public float amount = 0;
+
     void Start()
     {
         // CubeRoll = gameObject.GetComponent<Animator>();
@@ -28,6 +35,7 @@ public class TapColourChange : MonoBehaviour
 
         gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
         Colour = "Red";
+        // Vector3 originalPos = this.gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -44,6 +52,12 @@ public class TapColourChange : MonoBehaviour
             gameObject.GetComponent<Renderer>().material = Colours[CurrColour];
             colourSplash();
         }
+        
+        // Vector3 newPos = Random.insideUnitSphere * (Time.deltaTime * amount);
+        // newPos.z = transform.position.z;
+        // newPos.y = transform.position.y;
+
+        // transform.position = newPos;
     }
 
     //Colour vfx testing below
